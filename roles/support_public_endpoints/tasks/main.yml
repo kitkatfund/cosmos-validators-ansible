@@ -63,7 +63,7 @@
 
 - name: Create rpc endpoint
   cloudflare_dns:
-    zone: polkachu.com
+    zone: kitkat.com
     record: '{{ dns_prefix }}-rpc'
     type: A
     value: '{{ ansible_host }}'
@@ -73,7 +73,7 @@
 
 - name: Create api endpoint
   cloudflare_dns:
-    zone: polkachu.com
+    zone: kitkat.com
     record: '{{ dns_prefix }}-api'
     type: A
     value: '{{ ansible_host }}'
@@ -83,7 +83,7 @@
 
 - name: Create grpc endpoint
   cloudflare_dns:
-    zone: polkachu.com
+    zone: kitkat.com
     record: '{{ dns_prefix }}-grpc'
     type: A
     value: '{{ ansible_host }}'
