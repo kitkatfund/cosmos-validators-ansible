@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name {{dns_prefix}}-api.kitkat.com;
+    server_name {{dns_prefix}}-api.kitkat.zone;
     location / {
 {% if partner is undefined %}
         limit_req zone=limitreqsbyaddr burst=150 nodelay;
