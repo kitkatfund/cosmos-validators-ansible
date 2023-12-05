@@ -8,7 +8,7 @@
 
 - name: Install deb binary
   become: true
-  command: apt install /tmp/binary.deb -y
+  command: dpkg -i /tmp/binary.deb
 
 - name: Copy binary to /home/ubuntu/go/bin
   become: true
