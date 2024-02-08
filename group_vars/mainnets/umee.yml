@@ -14,7 +14,7 @@ update_website_immediately: false
 # [Optional] Snapshot
 snapshot_hour: 2
 snapshot_minute: 0
-wasm: outside
+wasm: 'outside'
 
 # price feeder
 price_feeder_address: 'umee1hqkd74jatslcc6le9snhun2lzjzqd4fsstwktj'
@@ -22,6 +22,6 @@ price_feeder_validator: 'umeevaloper1hqkd74jatslcc6le9snhun2lzjzqd4fss0fe6c'
 price_feeder_backend: os
 price_feeder_network: mainnet
 price_feeder_repo: https://github.com/ojo-network/price-feeder
-price_feeder_version: 'umee/v2.3.0'
+price_feeder_version: 'umee/v2.4.0'
 price_feeder_binary: true
 price_feeder_password: 'THIS_IS_NOT_A_REAL_PASSWORD'
