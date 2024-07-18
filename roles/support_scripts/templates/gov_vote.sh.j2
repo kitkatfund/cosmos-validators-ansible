@@ -6,7 +6,7 @@
 {% endif %}
 
 # Constants
-KEY="{{ polkachu_key }}"
+KEY="{{ kitkat_key }}"
 PASSPHRASE="{{ polkachu_secret }}"
 
 echo ${PASSPHRASE} | {{ daemon }} tx gov vote $1 $2 --from $KEY -b sync {{ tx_flags }} --yes

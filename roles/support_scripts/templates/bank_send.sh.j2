@@ -6,7 +6,7 @@
 {% endif %}
 
 # Constants
-KEY="{{ polkachu_key }}"
+KEY="{{ kitkat_key }}"
 PASSPHRASE="{{ polkachu_secret }}"
 
 echo ${PASSPHRASE} | {{ daemon }} tx bank send $KEY $1 $2  -b sync {{ tx_flags }} --yes
