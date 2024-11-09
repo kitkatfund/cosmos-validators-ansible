@@ -1,18 +1,18 @@
 ---
 - name: Prepare
-  hosts: '{{ target }}'
+  hosts: "{{ target }}"
   become: true
   gather_facts: false
   vars_files:
-    - '{{ var_file }}'
+    - "{{ var_file }}"
   roles:
     - prepare
 
 - name: Main
-  hosts: '{{ target }}'
+  hosts: "{{ target }}"
   gather_facts: false
   vars_files:
-    - '{{ var_file }}'
+    - "{{ var_file }}"
   roles:
     - node_install
     - node_initialize
