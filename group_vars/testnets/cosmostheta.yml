@@ -1,5 +1,5 @@
 network: cosmostheta
-folder: '.gaia'
+folder: ".gaia"
 daemon: gaiad
 chain_id: theta-testnet-001
 node_version: v21.0.0-rc0
