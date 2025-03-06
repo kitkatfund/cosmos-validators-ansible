@@ -1,5 +1,5 @@
 network: odin
-folder: '.odin'
+folder: ".odin"
 daemon: odind
 chain_id: odin-mainnet-freya
 node_version: v0.11.0
@@ -15,4 +15,4 @@ update_website_immediately: true
 # [Optional] Snapshot
 snapshot_hour: 1
 snapshot_minute: 30
-wasm: 'outside'
+wasm: "outside"

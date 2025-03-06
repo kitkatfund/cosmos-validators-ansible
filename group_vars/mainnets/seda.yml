@@ -1,5 +1,5 @@
 network: seda
-folder: '.sedad'
+folder: ".sedad"
 daemon: sedad
 chain_id: seda-1
 node_version: v0.1.9

@@ -1,6 +1,6 @@
 # 9
 network: paloma
-folder: '.paloma'
+folder: ".paloma"
 daemon: palomad
 chain_id: 'tumbler'
 node_version: 'v2.4.7'

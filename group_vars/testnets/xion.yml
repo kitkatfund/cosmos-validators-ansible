@@ -13,7 +13,7 @@
 # custom_port_prefix: 223
 
 network: xion
-folder: '.xiond'
+folder: ".xiond"
 daemon: xiond
 chain_id: xion-testnet-2
 node_version: v16.0.0
@@ -27,4 +27,4 @@ upgrade_folder: v16
 # [Optional] Snapshot
 snapshot_hour: 1
 snapshot_minute: 30
-wasm: 'outside'
+wasm: "outside"

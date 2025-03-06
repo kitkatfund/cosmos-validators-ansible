@@ -1,5 +1,5 @@
 network: archway
-folder: '.archway'
+folder: ".archway"
 daemon: archwayd
 chain_id: archway-1
 node_version: 'v10.0.0'
@@ -15,4 +15,4 @@ update_website_immediately: false
 # [Optional] Snapshot
 snapshot_hour: 1
 snapshot_minute: 15
-wasm: 'outside'
+wasm: "outside"

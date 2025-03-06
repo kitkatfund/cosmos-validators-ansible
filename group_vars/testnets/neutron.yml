@@ -1,5 +1,5 @@
 network: neutron
-folder: '.neutrond'
+folder: ".neutrond"
 daemon: neutrond
 chain_id: pion-1
 node_version: v5.1.1
@@ -11,9 +11,9 @@ peers: '5f0604c2b8161004866c954c1d877f565b2fc69c@pion-banana.rs-testnet.polypore
 upgrade_folder: v5.1.0
 custom_port_prefix: 191
 update_website_immediately: true
-minimum_gas_price: '0untrn'
+minimum_gas_price: "0untrn"
 
 # [Optional] Snapshot
 snapshot_hour: 1
 snapshot_minute: 0
-wasm: 'outside'
+wasm: "outside"

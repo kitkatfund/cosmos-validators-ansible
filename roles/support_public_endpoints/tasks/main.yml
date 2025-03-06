@@ -51,9 +51,9 @@
   import_tasks: cube.yml
   when: partner is defined and partner == 'cube'
 
-- name: import tasks for walk
-  import_tasks: walk.yml
-  when: partner is defined and partner == 'walk'
+# - name: import tasks for walk
+#   import_tasks: walk.yml
+#   when: partner is defined and partner == 'walk'
 
 - name: import tasks for nbl
   import_tasks: nbl.yml
@@ -77,29 +77,29 @@
 - name: Copy nginx main config file
   become: true
   template:
-    src: 'nginx_conf.j2'
-    dest: '/etc/nginx/nginx.conf'
-    owner: 'root'
-    group: 'root'
-    mode: '0644'
+    src: "nginx_conf.j2"
+    dest: "/etc/nginx/nginx.conf"
+    owner: "root"
+    group: "root"
+    mode: "0644"
 
 - name: Copy nginx config file for rpc
   become: true
   template:
-    src: 'rpc_nginx_conf.j2'
-    dest: '/etc/nginx/sites-enabled/{{network}}-rpc'
-    owner: 'root'
-    group: 'root'
-    mode: '0644'
+    src: "rpc_nginx_conf.j2"
+    dest: "/etc/nginx/sites-enabled/{{network}}-rpc"
+    owner: "root"
+    group: "root"
+    mode: "0644"
 
 - name: Copy nginx config file for api
   become: true
   template:
-    src: 'api_nginx_conf.j2'
-    dest: '/etc/nginx/sites-enabled/{{network}}-api'
-    owner: 'root'
-    group: 'root'
-    mode: '0644'
+    src: "api_nginx_conf.j2"
+    dest: "/etc/nginx/sites-enabled/{{network}}-api"
+    owner: "root"
+    group: "root"
+    mode: "0644"
 
 - name: restart nginx service
   become: true
@@ -114,35 +114,35 @@
   become: true
   ufw:
     rule: allow
-    port: '{{ custom_port_prefix }}90'
+    port: "{{ custom_port_prefix }}90"
     proto: tcp
 
 - name: Create rpc endpoint
   cloudflare_dns:
-    zone: polkachu.com
-    record: '{{ rpc }}'
+    zone: kitkat.zone
+    record: "{{ rpc }}"
     type: A
-    value: '{{ ansible_host }}'
-    api_token: '{{ cloudflare_api_key }}'
+    value: "{{ ansible_host }}"
+    api_token: "{{ cloudflare_api_key }}"
     proxied: true
   register: record
 
 - name: Create api endpoint
   cloudflare_dns:
-    zone: polkachu.com
-    record: '{{ api }}'
+    zone: kitkat.zone
+    record: "{{ api }}"
     type: A
-    value: '{{ ansible_host }}'
-    api_token: '{{ cloudflare_api_key }}'
+    value: "{{ ansible_host }}"
+    api_token: "{{ cloudflare_api_key }}"
     proxied: true
   register: record
 
 - name: Create grpc endpoint
   cloudflare_dns:
-    zone: polkachu.com
-    record: '{{ grpc }}'
+    zone: kitkat.zone
+    record: "{{ grpc }}"
     type: A
-    value: '{{ ansible_host }}'
-    api_token: '{{ cloudflare_api_key }}'
+    value: "{{ ansible_host }}"
+    api_token: "{{ cloudflare_api_key }}"
     proxied: false
   register: record
